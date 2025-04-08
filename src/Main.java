@@ -1,21 +1,19 @@
-// Main.java
-import java.util.Scanner; // we import Scanner to take input
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in); // Step 1: create Scanner object
+        Scanner sc = new Scanner(System.in);
 
-        // Step 2: Ask for user name
-        System.out.print("Enter your name: ");
-        String name = input.nextLine(); // reads text input
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
 
-        // Step 3: Ask for age
-        System.out.print("Enter your age: ");
-        int age = input.nextInt(); // reads integer input
+        // Using operators and if-else conditional
+        if (num % 2 == 0) { // % operator checks remainder
+            System.out.println(num + " is Even number!");
+        } else {
+            System.out.println(num + " is Odd number!");
+        }
 
-        // Step 4: Output greeting
-        System.out.println("Hello " + name + "! You are " + age + " years old.");
-
-        input.close(); // close the scanner (good practice)
+        sc.close();
     }
 }
